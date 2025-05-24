@@ -1,0 +1,33 @@
+name: unauthorized_login_outside_business_hours_admin_users
+type: any
+index: winlogbeat-*
+query_key: host.ip
+
+num_events: 1
+timeframe:
+  minutes: 1
+
+filter:
+  - term:
+      event.code: "4624"
+  - bool:
+      must_not:
+        - range:
+            "@timestamp":
+              gte: "now/d+3h"
+              lt: "now/d+14h"
+  - match_phrase:
+      host.name: "viticm-soc"
+
+alert:
+  - "email"
+
+email:
+  - "rangammabokka46@gmail.com"
+
+# Optional SMTP config (if not in config.yaml)
+smtp_host: smtp.gmail.com
+smtp_port: 587
+smtp_ssl: false
+from_addr: "elastalert@gmail.com"
+smtp_auth_file: "email_auth.yaml"

@@ -1,0 +1,27 @@
+name: Brute Force Attempt
+type: frequency
+query_key: host.ip
+
+
+index: winlogbeat-*
+
+num_events: 4
+timeframe:
+  minutes: 5
+
+filter:
+  - term:
+      event.code: "4625"
+
+alert:
+  - "email"
+
+email:
+  - "<Your_email>@gmail.com"
+
+#Optional SMTP config (if not in config.yaml)
+smtp_host: smtp.gmail.com
+smtp_port: 587
+smtp_ssl: false
+from_addr: "elastalert@gmail.com"
+smtp_auth_file: "email_auth.yaml"

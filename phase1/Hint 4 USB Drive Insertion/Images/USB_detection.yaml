@@ -1,0 +1,32 @@
+name: USB or Removable Drive File Creation
+type: any
+is_enabled: true
+index: winlogbeat-*
+
+filter:
+  - bool:
+      should:
+        - term:
+            event.code: "11"   # Sysmon File Create
+        - term:
+            event.code: "1"    # Sysmon Process Create
+      minimum_should_match: 1
+
+alert:
+  - email
+
+email:
+  - "rangammabokka46@gmail.com"
+
+alert_subject: "🔌 USB/Removable activity detected"
+
+  
+
+realert:
+  minutes: 2
+
+smtp_host: smtp.gmail.com
+smtp_port: 587
+smtp_ssl: false
+from_addr: "elastalert@gmail.com"
+smtp_auth_file: "email_auth.yaml"

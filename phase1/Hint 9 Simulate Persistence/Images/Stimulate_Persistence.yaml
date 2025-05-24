@@ -1,0 +1,34 @@
+name: Persistence via Startup Folder
+type: frequency
+index: winlogbeat-*
+num_events: 1
+timeframe:
+  minutes: 15
+
+filter:
+- query:
+    query_string:
+      query: "event.code: \"1\" AND process.command_line: *evil.bat*"
+
+ 
+
+alert:
+  - email
+
+email:
+  - "rangammabomma46@gmail.com"
+
+alert_text: |
+   Persistence Detected
+  
+
+
+realert:
+  minutes: 10
+
+smtp_host: smtp.gmail.com
+smtp_port: 587
+smtp_ssl: false
+smtp_use_tls: true
+from_addr: "elastalerts@gmail.com"
+smtp_auth_file: "email_auth.yaml"

@@ -1,0 +1,25 @@
+name: Local User Creation and Privilege Abuse
+type: frequency
+index: winlogbeat-*
+is_enabled: true
+num_events: 1
+timeframe:
+  minutes: 10
+filter:
+- query:
+    query_string:
+      query: "(event.code: 4720 OR event.code: 4732)"
+alert:
+- "email"
+email:
+- "rangammabokka46@gmail.com"
+smtp_host: smtp.gmail.com
+smtp_port: 587
+smtp_ssl: false
+smtp_use_tls: true
+from_addr: "elastalert@gmail.com"
+smtp_auth_file: "email_auth.yaml"
+alert_subject: "Suspicious Local User Creation and Privilege Abuse"
+alert_text: "A new local user was created and added to the administrators group."
+realert:
+  minutes: 2

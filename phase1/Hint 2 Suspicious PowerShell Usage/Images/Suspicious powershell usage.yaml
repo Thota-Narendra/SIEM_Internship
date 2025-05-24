@@ -1,0 +1,69 @@
+name: Suspicious PowerShell Usage - Malware Simulation
+type: any
+is_enabled: true
+index: winlogbeat-*   # Adjust if your index is different
+
+filter:
+- bool:
+    must:
+      - match_phrase:
+          event.provider: "Microsoft-Windows-Sysmon"
+      - bool:
+          should:
+            - match_phrase:
+                event.code: "1"
+            - match_phrase:
+                event.code: "11"
+            - match_phrase:
+                event.code: "13"
+          minimum_should_match: 1
+    should:
+      - wildcard:
+          process.command_line: "*powershell*"
+      - wildcard:
+          process.command_line: "*malware.bat*"
+      - wildcard:
+          file.path: "*\\malware_simulation\\*"
+      - wildcard:
+          registry.path: "*\\Software\\MalwareTest*"
+
+alert:
+  - email  
+
+email:
+  - rangammabokka46@gmail.com
+
+alert_subject: "Suspicious PowerShell Malware Simulation Detected"
+alert_text: |
+  A suspicious PowerShell activity indicating malware simulation was detected.
+  Details:
+  - host.name
+  - user.name
+  - event.code
+  - process.name
+  - process.command_line
+  - file.path
+  - registry.path
+
+alert_subject_args:
+  - host.name
+
+alert_text_args:
+  - host.name
+  - user.name
+  - event.code
+  - process.name
+  - process.command_line
+  - file.path
+  - registry.path
+
+realert:
+  minutes: 2
+
+
+#Optional SMTP config (if not in config.yaml)
+smtp_host: smtp.gmail.com
+smtp_port: 587
+smtp_ssl: false
+from_addr: "elastalert@gmail.com"
+smtp_auth_file: "email_auth.yaml"

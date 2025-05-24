@@ -1,0 +1,26 @@
+name: Suspicious Scheduled Task
+type: frequency
+is_enabled: true
+index: winlogbeat-*
+num_events: 1
+timeframe:
+  minutes: 10
+filter:
+- query:
+    query_string:
+      query: 'event.code : "1"  AND process.name: "schtasks.exe"'
+alert:
+- "email"
+email:
+- "rangammabokka46@gmail.com"
+
+#Optional SMTP config (if not in config.yaml)
+smtp_host: smtp.gmail.com
+smtp_port: 587
+smtp_ssl: false
+from_addr: "elastalert@gmail.com"
+smtp_auth_file: "email_auth.yaml"
+
+
+realert:
+  minutes: 2
