@@ -1,0 +1,317 @@
+{
+  "_index": ".ds-winlogbeat-8.10.2-2025.05.14-000001",
+  "_id": "LHKfDJcBwK5GnBpekovM",
+  "_version": 1,
+  "_score": 0,
+  "_source": {
+    
+    "agent": {
+      "name": "Viticm-SOC",
+      "id": "e5e3a761-acc3-41a2-88c5-ee2b2b236970",
+      "type": "winlogbeat",
+      "ephemeral_id": "e6902709-4521-4380-8a38-3cf18398314e",
+      "version": "8.10.2"
+    },
+    "process": {
+      "name": "powershell.exe",
+      "pid": 2528,
+      "entity_id": "{7e25c1a1-46f2-6834-2301-000000002d00}",
+      "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    },
+    "winlog": {
+      "computer_name": "Viticm-SOC",
+      "process": {
+        "pid": 2440,
+        "thread": {
+          "id": 3464
+        }
+      },
+      "channel": "Microsoft-Windows-Sysmon/Operational",
+      "event_data": {
+        "CreationUtcTime": "2025-05-26 11:25:46.794"
+      },
+      "opcode": "Info",
+      "version": 2,
+      "record_id": "31374",
+      "task": "File created (rule: FileCreate)",
+      "event_id": "11",
+      "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+      "api": "wineventlog",
+      "provider_name": "Microsoft-Windows-Sysmon",
+      "user": {
+        "identifier": "S-1-5-18",
+        "domain": "NT AUTHORITY",
+        "name": "SYSTEM",
+        "type": "User"
+      }
+    },
+    "log": {
+      "level": "information"
+    },
+    "rule": {
+      "name": "Downloads"
+    },
+    "message": "File created:\nRuleName: Downloads\nUtcTime: 2025-05-26 12:44:31.597\nProcessGuid: {7e25c1a1-46f2-6834-2301-000000002d00}\nProcessId: 2528\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\nTargetFilename: C:\\Users\\ranga\\Downloads\\evil.zip\nCreationUtcTime: 2025-05-26 11:25:46.794\nUser: VITICM-SOC\\ranga",
+    "@timestamp": "2025-05-26T12:44:31.597Z",
+    "file": {
+      "path": "C:\\Users\\ranga\\Downloads\\evil.zip",
+      "extension": "zip",
+      "name": "evil.zip",
+      "directory": "C:\\Users\\ranga\\Downloads"
+    },
+    "ecs": {
+      "version": "1.12.0"
+    },
+    "related": {
+      "user": [
+        "ranga"
+      ]
+    },
+    "host": {
+      "hostname": "viticm-soc",
+      "os": {
+        "build": "19045.5854",
+        "kernel": "10.0.19041.5848 (WinBuild.160101.0800)",
+        "name": "Windows 10 Home",
+        "type": "windows",
+        "family": "windows",
+        "version": "10.0",
+        "platform": "windows"
+      },
+      "ip": [
+        "fe80::2674:6aaf:881:b09b",
+        "192.168.52.131"
+      ],
+      "name": "viticm-soc",
+      "id": "7e25c1a1-4745-47c6-abe9-ec7f50bf1d98",
+      "mac": [
+        "00-0C-29-C5-7F-10"
+      ],
+      "architecture": "x86_64"
+    },
+    "event": {
+      "ingested": "2025-05-26T12:44:33.864509100Z",
+      "code": "11",
+      "provider": "Microsoft-Windows-Sysmon",
+      "created": "2025-05-26T12:44:32.996Z",
+      "kind": "event",
+      "module": "sysmon",
+      "action": "File created (rule: FileCreate)",
+      "category": [
+        "file"
+      ],
+      "type": [
+        "creation"
+      ]
+    },
+    "user": {
+      "domain": "VITICM-SOC",
+      "name": "ranga",
+      "id": "S-1-5-18"
+    }
+  },
+  "fields": {
+    "file.path": [
+      "C:\\Users\\ranga\\Downloads\\evil.zip"
+    ],
+    "event.category": [
+      "file"
+    ],
+    "process.name.text": [
+      "powershell.exe"
+    ],
+    "host.os.name.text": [
+      "Windows 10 Home"
+    ],
+    "winlog.provider_guid": [
+      "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+    ],
+    "winlog.provider_name": [
+      "Microsoft-Windows-Sysmon"
+    ],
+    "host.hostname": [
+      "viticm-soc"
+    ],
+    "process.pid": [
+      2528
+    ],
+    "winlog.computer_name": [
+      "Viticm-SOC"
+    ],
+    "host.mac": [
+      "00-0C-29-C5-7F-10"
+    ],
+    "winlog.process.pid": [
+      2440
+    ],
+    "host.os.version": [
+      "10.0"
+    ],
+    "winlog.record_id": [
+      "31374"
+    ],
+    "host.os.name": [
+      "Windows 10 Home"
+    ],
+    "log.level": [
+      "information"
+    ],
+    "agent.name": [
+      "Viticm-SOC"
+    ],
+    "host.name": [
+      "viticm-soc"
+    ],
+    "event.kind": [
+      "event"
+    ],
+    "winlog.version": [
+      2
+    ],
+    "file.path.text": [
+      "C:\\Users\\ranga\\Downloads\\evil.zip"
+    ],
+    "host.os.type": [
+      "windows"
+    ],
+    "rule.name": [
+      "Downloads"
+    ],
+    "user.id": [
+      "S-1-5-18"
+    ],
+    "agent.hostname": [
+      "Viticm-SOC"
+    ],
+    "related.user": [
+      "ranga"
+    ],
+    "host.architecture": [
+      "x86_64"
+    ],
+    "process.name": [
+      "powershell.exe"
+    ],
+    "event.provider": [
+      "Microsoft-Windows-Sysmon"
+    ],
+    "event.code": [
+      "11"
+    ],
+    "agent.id": [
+      "e5e3a761-acc3-41a2-88c5-ee2b2b236970"
+    ],
+    "ecs.version": [
+      "1.12.0"
+    ],
+    "event.created": [
+      "2025-05-26T12:44:32.996Z"
+    ],
+    "agent.version": [
+      "8.10.2"
+    ],
+    "file.extension": [
+      "zip"
+    ],
+    "host.os.family": [
+      "windows"
+    ],
+    "winlog.process.thread.id": [
+      3464
+    ],
+    "winlog.event_data.CreationUtcTime": [
+      "2025-05-26 11:25:46.794"
+    ],
+    "user.name": [
+      "ranga"
+    ],
+    "process.entity_id": [
+      "{7e25c1a1-46f2-6834-2301-000000002d00}"
+    ],
+    "host.os.build": [
+      "19045.5854"
+    ],
+    "winlog.user.type": [
+      "User"
+    ],
+    "host.ip": [
+      "fe80::2674:6aaf:881:b09b",
+      "192.168.52.131"
+    ],
+    "agent.type": [
+      "winlogbeat"
+    ],
+    "process.executable.text": [
+      "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    ],
+    "event.module": [
+      "sysmon"
+    ],
+    "host.os.kernel": [
+      "10.0.19041.5848 (WinBuild.160101.0800)"
+    ],
+    "winlog.api": [
+      "wineventlog"
+    ],
+    "user.domain": [
+      "VITICM-SOC"
+    ],
+    "host.id": [
+      "7e25c1a1-4745-47c6-abe9-ec7f50bf1d98"
+    ],
+    "process.executable": [
+      "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    ],
+    "winlog.user.identifier": [
+      "S-1-5-18"
+    ],
+    "file.directory": [
+      "C:\\Users\\ranga\\Downloads"
+    ],
+    "winlog.task": [
+      "File created (rule: FileCreate)"
+    ],
+    "winlog.user.domain": [
+      "NT AUTHORITY"
+    ],
+    "file.name": [
+      "evil.zip"
+    ],
+    "message": [
+      "File created:\nRuleName: Downloads\nUtcTime: 2025-05-26 12:44:31.597\nProcessGuid: {7e25c1a1-46f2-6834-2301-000000002d00}\nProcessId: 2528\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\nTargetFilename: C:\\Users\\ranga\\Downloads\\evil.zip\nCreationUtcTime: 2025-05-26 11:25:46.794\nUser: VITICM-SOC\\ranga"
+    ],
+    "winlog.event_id": [
+      "11"
+    ],
+    "winlog.user.name": [
+      "SYSTEM"
+    ],
+    "event.action": [
+      "File created (rule: FileCreate)"
+    ],
+    "event.ingested": [
+      "2025-05-26T12:44:33.864Z"
+    ],
+    "@timestamp": [
+      "2025-05-26T12:44:31.597Z"
+    ],
+    "winlog.channel": [
+      "Microsoft-Windows-Sysmon/Operational"
+    ],
+    "host.os.platform": [
+      "windows"
+    ],
+    "event.type": [
+      "creation"
+    ],
+    "winlog.opcode": [
+      "Info"
+    ],
+    "agent.ephemeral_id": [
+      "e6902709-4521-4380-8a38-3cf18398314e"
+    ],
+    "user.name.text": [
+      "ranga"
+    ]
+  }
+}
