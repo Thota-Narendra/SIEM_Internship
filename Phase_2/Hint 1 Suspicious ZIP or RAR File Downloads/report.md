@@ -52,7 +52,7 @@ event.code: 11 AND file.name: (*.zip OR *.rar OR *.7z) AND process.name: powersh
 
 ## 📬 Log of File Creation
 ![alt text](<Screenshot 2025-05-26 210236.png>)
-```
+
 
 ## 🚨 Analyst Action on Alert
 
@@ -72,8 +72,6 @@ event.code: 11 AND file.name: (*.zip OR *.rar OR *.7z) AND process.name: powersh
 ## ✅ Detection Status
 
 **Successfully Triggered**
-
-* Alert was sent via email
 * Events appeared in Kibana (Event ID 11 with PowerShell)
 
 ---
