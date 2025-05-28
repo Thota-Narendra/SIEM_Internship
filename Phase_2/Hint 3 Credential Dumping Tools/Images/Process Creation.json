@@ -1,0 +1,265 @@
+{
+  "@timestamp": [
+    "2025-05-28T17:33:07.602Z"
+  ],
+  "agent.ephemeral_id": [
+    "41f231e3-d742-483a-9b00-1a308e8f2ffd"
+  ],
+  "agent.hostname": [
+    "Viticm-SOC"
+  ],
+  "agent.id": [
+    "e5e3a761-acc3-41a2-88c5-ee2b2b236970"
+  ],
+  "agent.name": [
+    "Viticm-SOC"
+  ],
+  "agent.type": [
+    "winlogbeat"
+  ],
+  "agent.version": [
+    "8.10.2"
+  ],
+  "ecs.version": [
+    "1.12.0"
+  ],
+  "event.action": [
+    "Process Create (rule: ProcessCreate)"
+  ],
+  "event.category": [
+    "process"
+  ],
+  "event.code": [
+    "1"
+  ],
+  "event.created": [
+    "2025-05-28T17:33:09.381Z"
+  ],
+  "event.ingested": [
+    "2025-05-28T17:33:10.222Z"
+  ],
+  "event.kind": [
+    "event"
+  ],
+  "event.module": [
+    "sysmon"
+  ],
+  "event.provider": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "event.type": [
+    "start"
+  ],
+  "host.architecture": [
+    "x86_64"
+  ],
+  "host.hostname": [
+    "viticm-soc"
+  ],
+  "host.id": [
+    "7e25c1a1-4745-47c6-abe9-ec7f50bf1d98"
+  ],
+  "host.ip": [
+    "fe80::2674:6aaf:881:b09b",
+    "192.168.52.131"
+  ],
+  "host.mac": [
+    "00-0C-29-C5-7F-10"
+  ],
+  "host.name": [
+    "viticm-soc"
+  ],
+  "host.os.build": [
+    "19045.3803"
+  ],
+  "host.os.family": [
+    "windows"
+  ],
+  "host.os.kernel": [
+    "10.0.19041.3803 (WinBuild.160101.0800)"
+  ],
+  "host.os.name": [
+    "Windows 10 Home"
+  ],
+  "host.os.name.text": [
+    "Windows 10 Home"
+  ],
+  "host.os.platform": [
+    "windows"
+  ],
+  "host.os.type": [
+    "windows"
+  ],
+  "host.os.version": [
+    "10.0"
+  ],
+  "log.level": [
+    "information"
+  ],
+  "message": [
+    "Process Create:\nRuleName: -\nUtcTime: 2025-05-28 17:33:07.602\nProcessGuid: {7e25c1a1-48d3-6837-4a02-000000000300}\nProcessId: 568\nImage: C:\\Tools\\LaZagne.exe\nFileVersion: -\nDescription: -\nProduct: -\nCompany: -\nOriginalFileName: -\nCommandLine: LaZagne.exe  all\nCurrentDirectory: C:\\Tools\\\nUser: VITICM-SOC\\ranga\nLogonGuid: {7e25c1a1-25a6-6837-47f4-030000000000}\nLogonId: 0x3F447\nTerminalSessionId: 1\nIntegrityLevel: High\nHashes: MD5=81448745B5D62608B37888B38E9F276A,SHA256=DC06D62EE95062E714F2566C95B8EDAABFD387023B1BF98A09078B84007D5268,IMPHASH=5BC16B5845145EB0EDB88983820691B1\nParentProcessGuid: {7e25c1a1-48d3-6837-4902-000000000300}\nParentProcessId: 6032\nParentImage: C:\\Tools\\LaZagne.exe\nParentCommandLine: LaZagne.exe  all\nParentUser: VITICM-SOC\\ranga"
+  ],
+  "process.args": [
+    "LaZagne.exe",
+    "all"
+  ],
+  "process.args_count": [
+    2
+  ],
+  "process.command_line": [
+    "LaZagne.exe  all"
+  ],
+  "process.command_line.text": [
+    "LaZagne.exe  all"
+  ],
+  "process.entity_id": [
+    "{7e25c1a1-48d3-6837-4a02-000000000300}"
+  ],
+  "process.executable": [
+    "C:\\Tools\\LaZagne.exe"
+  ],
+  "process.executable.text": [
+    "C:\\Tools\\LaZagne.exe"
+  ],
+  "process.hash.md5": [
+    "81448745b5d62608b37888b38e9f276a"
+  ],
+  "process.hash.sha256": [
+    "dc06d62ee95062e714f2566c95b8edaabfd387023b1bf98a09078b84007d5268"
+  ],
+  "process.name": [
+    "LaZagne.exe"
+  ],
+  "process.name.text": [
+    "LaZagne.exe"
+  ],
+  "process.parent.args": [
+    "LaZagne.exe",
+    "all"
+  ],
+  "process.parent.args_count": [
+    2
+  ],
+  "process.parent.command_line": [
+    "LaZagne.exe  all"
+  ],
+  "process.parent.command_line.text": [
+    "LaZagne.exe  all"
+  ],
+  "process.parent.entity_id": [
+    "{7e25c1a1-48d3-6837-4902-000000000300}"
+  ],
+  "process.parent.executable": [
+    "C:\\Tools\\LaZagne.exe"
+  ],
+  "process.parent.executable.text": [
+    "C:\\Tools\\LaZagne.exe"
+  ],
+  "process.parent.name": [
+    "LaZagne.exe"
+  ],
+  "process.parent.name.text": [
+    "LaZagne.exe"
+  ],
+  "process.parent.pid": [
+    6032
+  ],
+  "process.pe.imphash": [
+    "5bc16b5845145eb0edb88983820691b1"
+  ],
+  "process.pid": [
+    568
+  ],
+  "process.working_directory": [
+    "C:\\Tools\\"
+  ],
+  "process.working_directory.text": [
+    "C:\\Tools\\"
+  ],
+  "related.hash": [
+    "dc06d62ee95062e714f2566c95b8edaabfd387023b1bf98a09078b84007d5268",
+    "81448745b5d62608b37888b38e9f276a",
+    "5bc16b5845145eb0edb88983820691b1"
+  ],
+  "related.user": [
+    "ranga"
+  ],
+  "user.domain": [
+    "VITICM-SOC"
+  ],
+  "user.id": [
+    "S-1-5-18"
+  ],
+  "user.name": [
+    "ranga"
+  ],
+  "user.name.text": [
+    "ranga"
+  ],
+  "winlog.api": [
+    "wineventlog"
+  ],
+  "winlog.channel": [
+    "Microsoft-Windows-Sysmon/Operational"
+  ],
+  "winlog.computer_name": [
+    "Viticm-SOC"
+  ],
+  "winlog.event_data.IntegrityLevel": [
+    "High"
+  ],
+  "winlog.event_data.LogonGuid": [
+    "{7e25c1a1-25a6-6837-47f4-030000000000}"
+  ],
+  "winlog.event_data.LogonId": [
+    "0x3f447"
+  ],
+  "winlog.event_data.ParentUser": [
+    "VITICM-SOC\\ranga"
+  ],
+  "winlog.event_data.TerminalSessionId": [
+    "1"
+  ],
+  "winlog.event_id": [
+    "1"
+  ],
+  "winlog.opcode": [
+    "Info"
+  ],
+  "winlog.process.pid": [
+    2408
+  ],
+  "winlog.process.thread.id": [
+    3132
+  ],
+  "winlog.provider_guid": [
+    "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+  ],
+  "winlog.provider_name": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "winlog.record_id": [
+    "2983"
+  ],
+  "winlog.task": [
+    "Process Create (rule: ProcessCreate)"
+  ],
+  "winlog.user.domain": [
+    "NT AUTHORITY"
+  ],
+  "winlog.user.identifier": [
+    "S-1-5-18"
+  ],
+  "winlog.user.name": [
+    "SYSTEM"
+  ],
+  "winlog.user.type": [
+    "User"
+  ],
+  "winlog.version": [
+    5
+  ],
+  "_id": "zGf0F5cBQ-3kqaYlhOzP",
+  "_index": ".ds-winlogbeat-8.10.2-2025.05.14-000001",
+  "_score": null
+}
