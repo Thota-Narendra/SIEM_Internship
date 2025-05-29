@@ -1,0 +1,32 @@
+
+name: Privilege Escalation Detection
+type: any
+index: winlogbeat-*
+description: Detects user creation and privilege escalation via net.exe commands.
+filter:
+- query:
+    bool:
+      should:
+        - match: { "event.code": "4720" }
+        - match: { "event.code": "4732" }
+        - match: { "event.code": "4672" }
+        - bool:
+            must:
+              - match: { "event.code": "1" }
+              - wildcard: { "process.command_line.keyword": "*net user*" }
+alert:
+- email
+email:
+- "youremail@example.com"
+alert_subject: "⚠️ Privilege Escalation Activity Detected"
+alert_text: |
+  Detected suspicious privilege escalation activity:
+  - Event ID: {0}
+  - Command: {1}
+  - User: {2}
+  - Host: {3}
+alert_text_args:
+- event.code
+- process.command_line
+- winlog.event_data.SubjectUserName
+- host.name

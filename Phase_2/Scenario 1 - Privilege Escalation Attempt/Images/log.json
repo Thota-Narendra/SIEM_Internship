@@ -1,9 +1,9 @@
 {
   "@timestamp": [
-    "2025-05-28T15:11:53.842Z"
+    "2025-05-29T04:31:54.343Z"
   ],
   "agent.ephemeral_id": [
-    "41f231e3-d742-483a-9b00-1a308e8f2ffd"
+    "26522737-e411-4fdb-a103-732ecfdfcff3"
   ],
   "agent.hostname": [
     "Viticm-SOC"
@@ -33,10 +33,10 @@
     "1"
   ],
   "event.created": [
-    "2025-05-28T15:11:55.371Z"
+    "2025-05-29T04:31:55.588Z"
   ],
   "event.ingested": [
-    "2025-05-28T15:11:56.712Z"
+    "2025-05-29T04:31:56.585Z"
   ],
   "event.kind": [
     "event"
@@ -97,108 +97,104 @@
     "information"
   ],
   "message": [
-    "Process Create:\nRuleName: -\nUtcTime: 2025-05-28 15:11:53.842\nProcessGuid: {7e25c1a1-27b9-6837-d100-000000000300}\nProcessId: 3988\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\nFileVersion: 10.0.19041.3636 (WinBuild.160101.0800)\nDescription: Windows PowerShell\nProduct: Microsoft® Windows® Operating System\nCompany: Microsoft Corporation\nOriginalFileName: PowerShell.EXE\nCommandLine: \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nop -w hidden  -EncodedCommand SQBFAFgALQBTAGUAYwB1AHIAaQB0AHkA\nCurrentDirectory: C:\\Users\\ranga\\OneDrive\\Documents\\\nUser: VITICM-SOC\\ranga\nLogonGuid: {7e25c1a1-25a6-6837-9bf4-030000000000}\nLogonId: 0x3F49B\nTerminalSessionId: 1\nIntegrityLevel: Medium\nHashes: MD5=6726185B70B5ADF05E8A1A1DF82EBF30,SHA256=64DD55E1C2373DEED25C2776F553C632E58C45E56A0E4639DFD54EE97EAB9C19,IMPHASH=E3007C8E0098D06ABF617EEE6F0C5ABD\nParentProcessGuid: {7e25c1a1-27b9-6837-cf00-000000000300}\nParentProcessId: 3260\nParentImage: C:\\Windows\\System32\\wscript.exe\nParentCommandLine: \"C:\\WINDOWS\\System32\\WScript.exe\" \"C:\\Users\\ranga\\OneDrive\\Documents\\malicious.vbs\" \nParentUser: VITICM-SOC\\ranga"
+    "Process Create:\nRuleName: -\nUtcTime: 2025-05-29 04:31:54.343\nProcessGuid: {7e25c1a1-e33a-6837-4801-000000000400}\nProcessId: 268\nImage: C:\\Windows\\System32\\net.exe\nFileVersion: 10.0.19041.1 (WinBuild.160101.0800)\nDescription: Net Command\nProduct: Microsoft® Windows® Operating System\nCompany: Microsoft Corporation\nOriginalFileName: net.exe\nCommandLine: net  localgroup administrators\nCurrentDirectory: C:\\WINDOWS\\system32\\\nUser: VITICM-SOC\\ranga\nLogonGuid: {7e25c1a1-de2f-6837-d5e2-040000000000}\nLogonId: 0x4E2D5\nTerminalSessionId: 1\nIntegrityLevel: High\nHashes: MD5=0BD94A338EEA5A4E1F2830AE326E6D19,SHA256=9F376759BCBCD705F726460FC4A7E2B07F310F52BAA73CAAAAA124FDDBDF993E,IMPHASH=57F0C47AE2A1A2C06C8B987372AB0B07\nParentProcessGuid: {7e25c1a1-e2eb-6837-3f01-000000000400}\nParentProcessId: 104\nParentImage: C:\\Windows\\System32\\cmd.exe\nParentCommandLine: \"C:\\WINDOWS\\system32\\cmd.exe\" \nParentUser: VITICM-SOC\\ranga"
   ],
   "process.args": [
-    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "-nop",
-    "-w",
-    "hidden",
-    "-EncodedCommand",
-    "SQBFAFgALQBTAGUAYwB1AHIAaQB0AHkA"
+    "net",
+    "localgroup",
+    "administrators"
   ],
   "process.args_count": [
-    6
+    3
   ],
   "process.command_line": [
-    "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nop -w hidden  -EncodedCommand SQBFAFgALQBTAGUAYwB1AHIAaQB0AHkA"
+    "net  localgroup administrators"
   ],
   "process.command_line.text": [
-    "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nop -w hidden  -EncodedCommand SQBFAFgALQBTAGUAYwB1AHIAaQB0AHkA"
+    "net  localgroup administrators"
   ],
   "process.entity_id": [
-    "{7e25c1a1-27b9-6837-d100-000000000300}"
+    "{7e25c1a1-e33a-6837-4801-000000000400}"
   ],
   "process.executable": [
-    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    "C:\\Windows\\System32\\net.exe"
   ],
   "process.executable.text": [
-    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    "C:\\Windows\\System32\\net.exe"
   ],
   "process.hash.md5": [
-    "6726185b70b5adf05e8a1a1df82ebf30"
+    "0bd94a338eea5a4e1f2830ae326e6d19"
   ],
   "process.hash.sha256": [
-    "64dd55e1c2373deed25c2776f553c632e58c45e56a0e4639dfd54ee97eab9c19"
+    "9f376759bcbcd705f726460fc4a7e2b07f310f52baa73caaaaa124fddbdf993e"
   ],
   "process.name": [
-    "powershell.exe"
+    "net.exe"
   ],
   "process.name.text": [
-    "powershell.exe"
+    "net.exe"
   ],
   "process.parent.args": [
-    "C:\\WINDOWS\\System32\\WScript.exe",
-    "C:\\Users\\ranga\\OneDrive\\Documents\\malicious.vbs"
+    "C:\\WINDOWS\\system32\\cmd.exe"
   ],
   "process.parent.args_count": [
-    2
+    1
   ],
   "process.parent.command_line": [
-    "\"C:\\WINDOWS\\System32\\WScript.exe\" \"C:\\Users\\ranga\\OneDrive\\Documents\\malicious.vbs\" "
+    "\"C:\\WINDOWS\\system32\\cmd.exe\" "
   ],
   "process.parent.command_line.text": [
-    "\"C:\\WINDOWS\\System32\\WScript.exe\" \"C:\\Users\\ranga\\OneDrive\\Documents\\malicious.vbs\" "
+    "\"C:\\WINDOWS\\system32\\cmd.exe\" "
   ],
   "process.parent.entity_id": [
-    "{7e25c1a1-27b9-6837-cf00-000000000300}"
+    "{7e25c1a1-e2eb-6837-3f01-000000000400}"
   ],
   "process.parent.executable": [
-    "C:\\Windows\\System32\\wscript.exe"
+    "C:\\Windows\\System32\\cmd.exe"
   ],
   "process.parent.executable.text": [
-    "C:\\Windows\\System32\\wscript.exe"
+    "C:\\Windows\\System32\\cmd.exe"
   ],
   "process.parent.name": [
-    "wscript.exe"
+    "cmd.exe"
   ],
   "process.parent.name.text": [
-    "wscript.exe"
+    "cmd.exe"
   ],
   "process.parent.pid": [
-    3260
+    104
   ],
   "process.pe.company": [
     "Microsoft Corporation"
   ],
   "process.pe.description": [
-    "Windows PowerShell"
+    "Net Command"
   ],
   "process.pe.file_version": [
-    "10.0.19041.3636 (WinBuild.160101.0800)"
+    "10.0.19041.1 (WinBuild.160101.0800)"
   ],
   "process.pe.imphash": [
-    "e3007c8e0098d06abf617eee6f0c5abd"
+    "57f0c47ae2a1a2c06c8b987372ab0b07"
   ],
   "process.pe.original_file_name": [
-    "PowerShell.EXE"
+    "net.exe"
   ],
   "process.pe.product": [
     "Microsoft® Windows® Operating System"
   ],
   "process.pid": [
-    3988
+    268
   ],
   "process.working_directory": [
-    "C:\\Users\\ranga\\OneDrive\\Documents\\"
+    "C:\\WINDOWS\\system32\\"
   ],
   "process.working_directory.text": [
-    "C:\\Users\\ranga\\OneDrive\\Documents\\"
+    "C:\\WINDOWS\\system32\\"
   ],
   "related.hash": [
-    "64dd55e1c2373deed25c2776f553c632e58c45e56a0e4639dfd54ee97eab9c19",
-    "6726185b70b5adf05e8a1a1df82ebf30",
-    "e3007c8e0098d06abf617eee6f0c5abd"
+    "9f376759bcbcd705f726460fc4a7e2b07f310f52baa73caaaaa124fddbdf993e",
+    "0bd94a338eea5a4e1f2830ae326e6d19",
+    "57f0c47ae2a1a2c06c8b987372ab0b07"
   ],
   "related.user": [
     "ranga"
@@ -228,19 +224,19 @@
     "Microsoft Corporation"
   ],
   "winlog.event_data.Description": [
-    "Windows PowerShell"
+    "Net Command"
   ],
   "winlog.event_data.FileVersion": [
-    "10.0.19041.3636 (WinBuild.160101.0800)"
+    "10.0.19041.1 (WinBuild.160101.0800)"
   ],
   "winlog.event_data.IntegrityLevel": [
-    "Medium"
+    "High"
   ],
   "winlog.event_data.LogonGuid": [
-    "{7e25c1a1-25a6-6837-9bf4-030000000000}"
+    "{7e25c1a1-de2f-6837-d5e2-040000000000}"
   ],
   "winlog.event_data.LogonId": [
-    "0x3f49b"
+    "0x4e2d5"
   ],
   "winlog.event_data.ParentUser": [
     "VITICM-SOC\\ranga"
@@ -258,10 +254,10 @@
     "Info"
   ],
   "winlog.process.pid": [
-    2408
+    2428
   ],
   "winlog.process.thread.id": [
-    3132
+    3144
   ],
   "winlog.provider_guid": [
     "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
@@ -270,7 +266,7 @@
     "Microsoft-Windows-Sysmon"
   ],
   "winlog.record_id": [
-    "2482"
+    "4616"
   ],
   "winlog.task": [
     "Process Create (rule: ProcessCreate)"
@@ -290,7 +286,7 @@
   "winlog.version": [
     5
   ],
-  "_id": "9GdzF5cBQ-3kqaYlOeYp",
+  "_id": "2VlPGpcBWZcyZxxBpDis",
   "_index": ".ds-winlogbeat-8.10.2-2025.05.14-000001",
   "_score": null
 }
