@@ -1,0 +1,33 @@
+name: Repetitive External HTTP Requests - Possible C2
+index: winlogbeat-*
+type: frequency
+num_events: 5
+timeframe:
+  minutes: 5
+
+filter:
+  - term:
+      event.code: "3"
+  - query:
+      query_string:
+        query: 'destination.port: 80 OR destination.port: 443'
+  - query:
+      query_string:
+        query: 'NOT destination.ip:("192.168.*" OR "10.*" OR "172.16.*")'
+
+query_key: destination.ip
+
+alert:
+  - email
+
+email:
+  - "your-email@example.com"
+
+alert_text: |
+  ⚠️ Possible C2 beaconing detected!
+  Detected repeated connections to {destination.ip} from {host.name} by {process.name}.
+
+alert_text_args:
+  - destination.ip
+  - host.name
+  - process.name
