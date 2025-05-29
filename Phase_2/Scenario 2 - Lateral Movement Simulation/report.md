@@ -99,7 +99,7 @@ Port: 445
 
 ### 📌 Detection Status
 
-Detection Tested :	✅ Yes
-Environment	Windows: 10 Home
 Tools Used : PsExec
+
 Alerts Triggered : ✅ 4624, 3, 1
+
