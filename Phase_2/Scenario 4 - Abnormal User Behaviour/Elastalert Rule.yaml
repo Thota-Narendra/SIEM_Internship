@@ -1,0 +1,50 @@
+name: "Abnormal User Behavior - Off Hours Login and File Access Burst"
+type: "frequency"
+
+index: "winlogbeat-*"
+
+filter:
+  - term:
+      event.code: 4624
+  - term:
+      winlog.event_data.LogonType: 2
+  - range:
+      "@timestamp":
+        from: "now-1d/d"
+        to: "now/d"
+  
+# Custom filter to detect logon outside business hours (e.g., 7 AM to 7 PM)
+# This requires an additional script or custom rule to filter timestamps or a Kibana query with alerting
+
+num_events: 1
+timeframe:
+  minutes: 1
+
+alert:
+  - "email"
+
+email:
+  - "your-email@example.com"
+
+# For detecting file access burst (Sysmon Event ID 11) in 10 minutes with threshold
+name: "File Access Burst Detection"
+type: "frequency"
+
+index: "sysmon-*"
+
+filter:
+  - term:
+      event.code: 11
+  - query:
+      query_string:
+        query: "file.path:*SensitiveFiles*"
+
+num_events: 50
+timeframe:
+  minutes: 10
+
+alert:
+  - "email"
+
+email:
+  - "your-email@example.com"

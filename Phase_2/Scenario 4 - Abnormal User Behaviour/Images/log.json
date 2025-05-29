@@ -1,0 +1,292 @@
+{
+  "@timestamp": [
+    "2025-05-29T17:16:28.309Z"
+  ],
+  "agent.ephemeral_id": [
+    "fe560d9a-c823-496b-9243-454bc00c5769"
+  ],
+  "agent.hostname": [
+    "Viticm-SOC"
+  ],
+  "agent.id": [
+    "e5e3a761-acc3-41a2-88c5-ee2b2b236970"
+  ],
+  "agent.name": [
+    "Viticm-SOC"
+  ],
+  "agent.type": [
+    "winlogbeat"
+  ],
+  "agent.version": [
+    "8.10.2"
+  ],
+  "ecs.version": [
+    "1.12.0"
+  ],
+  "event.action": [
+    "Process Create (rule: ProcessCreate)"
+  ],
+  "event.category": [
+    "process"
+  ],
+  "event.code": [
+    "1"
+  ],
+  "event.created": [
+    "2025-05-29T17:16:29.581Z"
+  ],
+  "event.ingested": [
+    "2025-05-29T17:16:30.437Z"
+  ],
+  "event.kind": [
+    "event"
+  ],
+  "event.module": [
+    "sysmon"
+  ],
+  "event.provider": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "event.type": [
+    "start"
+  ],
+  "host.architecture": [
+    "x86_64"
+  ],
+  "host.hostname": [
+    "viticm-soc"
+  ],
+  "host.id": [
+    "7e25c1a1-4745-47c6-abe9-ec7f50bf1d98"
+  ],
+  "host.ip": [
+    "fe80::2674:6aaf:881:b09b",
+    "192.168.52.131"
+  ],
+  "host.mac": [
+    "00-0C-29-C5-7F-10"
+  ],
+  "host.name": [
+    "viticm-soc"
+  ],
+  "host.os.build": [
+    "19045.3803"
+  ],
+  "host.os.family": [
+    "windows"
+  ],
+  "host.os.kernel": [
+    "10.0.19041.3803 (WinBuild.160101.0800)"
+  ],
+  "host.os.name": [
+    "Windows 10 Home"
+  ],
+  "host.os.name.text": [
+    "Windows 10 Home"
+  ],
+  "host.os.platform": [
+    "windows"
+  ],
+  "host.os.type": [
+    "windows"
+  ],
+  "host.os.version": [
+    "10.0"
+  ],
+  "log.level": [
+    "information"
+  ],
+  "message": [
+    "Process Create:\nRuleName: -\nUtcTime: 2025-05-29 17:16:28.309\nProcessGuid: {7e25c1a1-966c-6838-1402-000000000600}\nProcessId: 2020\nImage: C:\\Windows\\System32\\runas.exe\nFileVersion: 10.0.19041.3636 (WinBuild.160101.0800)\nDescription: Run As Utility\nProduct: Microsoft® Windows® Operating System\nCompany: Microsoft Corporation\nOriginalFileName: RUNAS.EXE\nCommandLine: runas  /user:pentester cmd\nCurrentDirectory: C:\\WINDOWS\\system32\\\nUser: VITICM-SOC\\pentester\nLogonGuid: {7e25c1a1-1916-6838-075b-080000000000}\nLogonId: 0x85B07\nTerminalSessionId: 1\nIntegrityLevel: High\nHashes: MD5=FE2B85D19B0C36E51229145BF483D6E9,SHA256=0867CC5937AB24D4CB334C1EF66A43D061923C856C64E585B15C3C9833ECBA0E,IMPHASH=BB66B03234C66AC6A9F7BA5216F66930\nParentProcessGuid: {7e25c1a1-3372-6838-d601-000000000600}\nParentProcessId: 7660\nParentImage: C:\\Windows\\System32\\cmd.exe\nParentCommandLine: \"C:\\WINDOWS\\system32\\cmd.exe\" \nParentUser: VITICM-SOC\\pentester"
+  ],
+  "process.args": [
+    "runas",
+    "/user:pentester",
+    "cmd"
+  ],
+  "process.args_count": [
+    3
+  ],
+  "process.command_line": [
+    "runas  /user:pentester cmd"
+  ],
+  "process.command_line.text": [
+    "runas  /user:pentester cmd"
+  ],
+  "process.entity_id": [
+    "{7e25c1a1-966c-6838-1402-000000000600}"
+  ],
+  "process.executable": [
+    "C:\\Windows\\System32\\runas.exe"
+  ],
+  "process.executable.text": [
+    "C:\\Windows\\System32\\runas.exe"
+  ],
+  "process.hash.md5": [
+    "fe2b85d19b0c36e51229145bf483d6e9"
+  ],
+  "process.hash.sha256": [
+    "0867cc5937ab24d4cb334c1ef66a43d061923c856c64e585b15c3c9833ecba0e"
+  ],
+  "process.name": [
+    "runas.exe"
+  ],
+  "process.name.text": [
+    "runas.exe"
+  ],
+  "process.parent.args": [
+    "C:\\WINDOWS\\system32\\cmd.exe"
+  ],
+  "process.parent.args_count": [
+    1
+  ],
+  "process.parent.command_line": [
+    "\"C:\\WINDOWS\\system32\\cmd.exe\" "
+  ],
+  "process.parent.command_line.text": [
+    "\"C:\\WINDOWS\\system32\\cmd.exe\" "
+  ],
+  "process.parent.entity_id": [
+    "{7e25c1a1-3372-6838-d601-000000000600}"
+  ],
+  "process.parent.executable": [
+    "C:\\Windows\\System32\\cmd.exe"
+  ],
+  "process.parent.executable.text": [
+    "C:\\Windows\\System32\\cmd.exe"
+  ],
+  "process.parent.name": [
+    "cmd.exe"
+  ],
+  "process.parent.name.text": [
+    "cmd.exe"
+  ],
+  "process.parent.pid": [
+    7660
+  ],
+  "process.pe.company": [
+    "Microsoft Corporation"
+  ],
+  "process.pe.description": [
+    "Run As Utility"
+  ],
+  "process.pe.file_version": [
+    "10.0.19041.3636 (WinBuild.160101.0800)"
+  ],
+  "process.pe.imphash": [
+    "bb66b03234c66ac6a9f7ba5216f66930"
+  ],
+  "process.pe.original_file_name": [
+    "RUNAS.EXE"
+  ],
+  "process.pe.product": [
+    "Microsoft® Windows® Operating System"
+  ],
+  "process.pid": [
+    2020
+  ],
+  "process.working_directory": [
+    "C:\\WINDOWS\\system32\\"
+  ],
+  "process.working_directory.text": [
+    "C:\\WINDOWS\\system32\\"
+  ],
+  "related.hash": [
+    "0867cc5937ab24d4cb334c1ef66a43d061923c856c64e585b15c3c9833ecba0e",
+    "fe2b85d19b0c36e51229145bf483d6e9",
+    "bb66b03234c66ac6a9f7ba5216f66930"
+  ],
+  "related.user": [
+    "pentester"
+  ],
+  "user.domain": [
+    "VITICM-SOC"
+  ],
+  "user.id": [
+    "S-1-5-18"
+  ],
+  "user.name": [
+    "pentester"
+  ],
+  "user.name.text": [
+    "pentester"
+  ],
+  "winlog.api": [
+    "wineventlog"
+  ],
+  "winlog.channel": [
+    "Microsoft-Windows-Sysmon/Operational"
+  ],
+  "winlog.computer_name": [
+    "Viticm-SOC"
+  ],
+  "winlog.event_data.Company": [
+    "Microsoft Corporation"
+  ],
+  "winlog.event_data.Description": [
+    "Run As Utility"
+  ],
+  "winlog.event_data.FileVersion": [
+    "10.0.19041.3636 (WinBuild.160101.0800)"
+  ],
+  "winlog.event_data.IntegrityLevel": [
+    "High"
+  ],
+  "winlog.event_data.LogonGuid": [
+    "{7e25c1a1-1916-6838-075b-080000000000}"
+  ],
+  "winlog.event_data.LogonId": [
+    "0x85b07"
+  ],
+  "winlog.event_data.ParentUser": [
+    "VITICM-SOC\\pentester"
+  ],
+  "winlog.event_data.Product": [
+    "Microsoft® Windows® Operating System"
+  ],
+  "winlog.event_data.TerminalSessionId": [
+    "1"
+  ],
+  "winlog.event_id": [
+    "1"
+  ],
+  "winlog.opcode": [
+    "Info"
+  ],
+  "winlog.process.pid": [
+    2328
+  ],
+  "winlog.process.thread.id": [
+    3720
+  ],
+  "winlog.provider_guid": [
+    "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+  ],
+  "winlog.provider_name": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "winlog.record_id": [
+    "6804"
+  ],
+  "winlog.task": [
+    "Process Create (rule: ProcessCreate)"
+  ],
+  "winlog.user.domain": [
+    "NT AUTHORITY"
+  ],
+  "winlog.user.identifier": [
+    "S-1-5-18"
+  ],
+  "winlog.user.name": [
+    "SYSTEM"
+  ],
+  "winlog.user.type": [
+    "User"
+  ],
+  "winlog.version": [
+    5
+  ],
+  "_id": "_HwLHZcBF8J-FDCjn2Zm",
+  "_index": ".ds-winlogbeat-8.10.2-2025.05.14-000001",
+  "_score": null
+}
