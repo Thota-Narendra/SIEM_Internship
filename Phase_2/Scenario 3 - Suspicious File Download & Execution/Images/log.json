@@ -1,0 +1,296 @@
+{
+  "@timestamp": [
+    "2025-05-28T15:11:53.842Z"
+  ],
+  "agent.ephemeral_id": [
+    "41f231e3-d742-483a-9b00-1a308e8f2ffd"
+  ],
+  "agent.hostname": [
+    "Viticm-SOC"
+  ],
+  "agent.id": [
+    "e5e3a761-acc3-41a2-88c5-ee2b2b236970"
+  ],
+  "agent.name": [
+    "Viticm-SOC"
+  ],
+  "agent.type": [
+    "winlogbeat"
+  ],
+  "agent.version": [
+    "8.10.2"
+  ],
+  "ecs.version": [
+    "1.12.0"
+  ],
+  "event.action": [
+    "Process Create (rule: ProcessCreate)"
+  ],
+  "event.category": [
+    "process"
+  ],
+  "event.code": [
+    "1"
+  ],
+  "event.created": [
+    "2025-05-28T15:11:55.371Z"
+  ],
+  "event.ingested": [
+    "2025-05-28T15:11:56.712Z"
+  ],
+  "event.kind": [
+    "event"
+  ],
+  "event.module": [
+    "sysmon"
+  ],
+  "event.provider": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "event.type": [
+    "start"
+  ],
+  "host.architecture": [
+    "x86_64"
+  ],
+  "host.hostname": [
+    "viticm-soc"
+  ],
+  "host.id": [
+    "7e25c1a1-4745-47c6-abe9-ec7f50bf1d98"
+  ],
+  "host.ip": [
+    "fe80::2674:6aaf:881:b09b",
+    "192.168.52.131"
+  ],
+  "host.mac": [
+    "00-0C-29-C5-7F-10"
+  ],
+  "host.name": [
+    "viticm-soc"
+  ],
+  "host.os.build": [
+    "19045.3803"
+  ],
+  "host.os.family": [
+    "windows"
+  ],
+  "host.os.kernel": [
+    "10.0.19041.3803 (WinBuild.160101.0800)"
+  ],
+  "host.os.name": [
+    "Windows 10 Home"
+  ],
+  "host.os.name.text": [
+    "Windows 10 Home"
+  ],
+  "host.os.platform": [
+    "windows"
+  ],
+  "host.os.type": [
+    "windows"
+  ],
+  "host.os.version": [
+    "10.0"
+  ],
+  "log.level": [
+    "information"
+  ],
+  "message": [
+    "Process Create:\nRuleName: -\nUtcTime: 2025-05-28 15:11:53.842\nProcessGuid: {7e25c1a1-27b9-6837-d100-000000000300}\nProcessId: 3988\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\nFileVersion: 10.0.19041.3636 (WinBuild.160101.0800)\nDescription: Windows PowerShell\nProduct: Microsoft® Windows® Operating System\nCompany: Microsoft Corporation\nOriginalFileName: PowerShell.EXE\nCommandLine: \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nop -w hidden  -EncodedCommand SQBFAFgALQBTAGUAYwB1AHIAaQB0AHkA\nCurrentDirectory: C:\\Users\\ranga\\OneDrive\\Documents\\\nUser: VITICM-SOC\\ranga\nLogonGuid: {7e25c1a1-25a6-6837-9bf4-030000000000}\nLogonId: 0x3F49B\nTerminalSessionId: 1\nIntegrityLevel: Medium\nHashes: MD5=6726185B70B5ADF05E8A1A1DF82EBF30,SHA256=64DD55E1C2373DEED25C2776F553C632E58C45E56A0E4639DFD54EE97EAB9C19,IMPHASH=E3007C8E0098D06ABF617EEE6F0C5ABD\nParentProcessGuid: {7e25c1a1-27b9-6837-cf00-000000000300}\nParentProcessId: 3260\nParentImage: C:\\Windows\\System32\\wscript.exe\nParentCommandLine: \"C:\\WINDOWS\\System32\\WScript.exe\" \"C:\\Users\\ranga\\OneDrive\\Documents\\malicious.vbs\" \nParentUser: VITICM-SOC\\ranga"
+  ],
+  "process.args": [
+    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "-nop",
+    "-w",
+    "hidden",
+    "-EncodedCommand",
+    "SQBFAFgALQBTAGUAYwB1AHIAaQB0AHkA"
+  ],
+  "process.args_count": [
+    6
+  ],
+  "process.command_line": [
+    "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nop -w hidden  -EncodedCommand SQBFAFgALQBTAGUAYwB1AHIAaQB0AHkA"
+  ],
+  "process.command_line.text": [
+    "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nop -w hidden  -EncodedCommand SQBFAFgALQBTAGUAYwB1AHIAaQB0AHkA"
+  ],
+  "process.entity_id": [
+    "{7e25c1a1-27b9-6837-d100-000000000300}"
+  ],
+  "process.executable": [
+    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+  ],
+  "process.executable.text": [
+    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+  ],
+  "process.hash.md5": [
+    "6726185b70b5adf05e8a1a1df82ebf30"
+  ],
+  "process.hash.sha256": [
+    "64dd55e1c2373deed25c2776f553c632e58c45e56a0e4639dfd54ee97eab9c19"
+  ],
+  "process.name": [
+    "powershell.exe"
+  ],
+  "process.name.text": [
+    "powershell.exe"
+  ],
+  "process.parent.args": [
+    "C:\\WINDOWS\\System32\\WScript.exe",
+    "C:\\Users\\ranga\\OneDrive\\Documents\\malicious.vbs"
+  ],
+  "process.parent.args_count": [
+    2
+  ],
+  "process.parent.command_line": [
+    "\"C:\\WINDOWS\\System32\\WScript.exe\" \"C:\\Users\\ranga\\OneDrive\\Documents\\malicious.vbs\" "
+  ],
+  "process.parent.command_line.text": [
+    "\"C:\\WINDOWS\\System32\\WScript.exe\" \"C:\\Users\\ranga\\OneDrive\\Documents\\malicious.vbs\" "
+  ],
+  "process.parent.entity_id": [
+    "{7e25c1a1-27b9-6837-cf00-000000000300}"
+  ],
+  "process.parent.executable": [
+    "C:\\Windows\\System32\\wscript.exe"
+  ],
+  "process.parent.executable.text": [
+    "C:\\Windows\\System32\\wscript.exe"
+  ],
+  "process.parent.name": [
+    "wscript.exe"
+  ],
+  "process.parent.name.text": [
+    "wscript.exe"
+  ],
+  "process.parent.pid": [
+    3260
+  ],
+  "process.pe.company": [
+    "Microsoft Corporation"
+  ],
+  "process.pe.description": [
+    "Windows PowerShell"
+  ],
+  "process.pe.file_version": [
+    "10.0.19041.3636 (WinBuild.160101.0800)"
+  ],
+  "process.pe.imphash": [
+    "e3007c8e0098d06abf617eee6f0c5abd"
+  ],
+  "process.pe.original_file_name": [
+    "PowerShell.EXE"
+  ],
+  "process.pe.product": [
+    "Microsoft® Windows® Operating System"
+  ],
+  "process.pid": [
+    3988
+  ],
+  "process.working_directory": [
+    "C:\\Users\\ranga\\OneDrive\\Documents\\"
+  ],
+  "process.working_directory.text": [
+    "C:\\Users\\ranga\\OneDrive\\Documents\\"
+  ],
+  "related.hash": [
+    "64dd55e1c2373deed25c2776f553c632e58c45e56a0e4639dfd54ee97eab9c19",
+    "6726185b70b5adf05e8a1a1df82ebf30",
+    "e3007c8e0098d06abf617eee6f0c5abd"
+  ],
+  "related.user": [
+    "ranga"
+  ],
+  "user.domain": [
+    "VITICM-SOC"
+  ],
+  "user.id": [
+    "S-1-5-18"
+  ],
+  "user.name": [
+    "ranga"
+  ],
+  "user.name.text": [
+    "ranga"
+  ],
+  "winlog.api": [
+    "wineventlog"
+  ],
+  "winlog.channel": [
+    "Microsoft-Windows-Sysmon/Operational"
+  ],
+  "winlog.computer_name": [
+    "Viticm-SOC"
+  ],
+  "winlog.event_data.Company": [
+    "Microsoft Corporation"
+  ],
+  "winlog.event_data.Description": [
+    "Windows PowerShell"
+  ],
+  "winlog.event_data.FileVersion": [
+    "10.0.19041.3636 (WinBuild.160101.0800)"
+  ],
+  "winlog.event_data.IntegrityLevel": [
+    "Medium"
+  ],
+  "winlog.event_data.LogonGuid": [
+    "{7e25c1a1-25a6-6837-9bf4-030000000000}"
+  ],
+  "winlog.event_data.LogonId": [
+    "0x3f49b"
+  ],
+  "winlog.event_data.ParentUser": [
+    "VITICM-SOC\\ranga"
+  ],
+  "winlog.event_data.Product": [
+    "Microsoft® Windows® Operating System"
+  ],
+  "winlog.event_data.TerminalSessionId": [
+    "1"
+  ],
+  "winlog.event_id": [
+    "1"
+  ],
+  "winlog.opcode": [
+    "Info"
+  ],
+  "winlog.process.pid": [
+    2408
+  ],
+  "winlog.process.thread.id": [
+    3132
+  ],
+  "winlog.provider_guid": [
+    "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+  ],
+  "winlog.provider_name": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "winlog.record_id": [
+    "2482"
+  ],
+  "winlog.task": [
+    "Process Create (rule: ProcessCreate)"
+  ],
+  "winlog.user.domain": [
+    "NT AUTHORITY"
+  ],
+  "winlog.user.identifier": [
+    "S-1-5-18"
+  ],
+  "winlog.user.name": [
+    "SYSTEM"
+  ],
+  "winlog.user.type": [
+    "User"
+  ],
+  "winlog.version": [
+    5
+  ],
+  "_id": "9GdzF5cBQ-3kqaYlOeYp",
+  "_index": ".ds-winlogbeat-8.10.2-2025.05.14-000001",
+  "_score": null
+}

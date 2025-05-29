@@ -1,0 +1,36 @@
+# Rule name
+name: Malicious_PowerShell_Detection
+
+# Type of alert
+type: frequency
+
+# Index to query
+index: winlogbeat-*
+
+# Query to find events
+filter:
+  - query:
+      query_string:
+        query: "event.code:1 AND process.command_line:*EncodedCommand* OR event.code:1 AND parent.process.name:(winword.exe OR wscript.exe) AND process.name:powershell.exe OR event.code:4104 AND message:(IEX OR EncodedCommand OR FromBase64String)"
+
+# Alert when the number of matching events is greater than 0
+num_events: 1
+
+# Timeframe to look back
+timeframe:
+  minutes: 5
+
+# Alert type
+alert:
+  - "email"
+
+# Email settings
+email:
+  - "security@example.com"
+
+# Additional alert metadata
+description: "Alert for potential malicious PowerShell execution detected in the environment."
+
+# Include additional fields in the alert
+include:
+  - _source
