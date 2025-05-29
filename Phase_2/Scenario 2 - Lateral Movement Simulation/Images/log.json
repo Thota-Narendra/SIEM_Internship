@@ -1,0 +1,225 @@
+{
+  "@timestamp": [
+    "2025-05-29T09:15:24.956Z"
+  ],
+  "agent.ephemeral_id": [
+    "fe560d9a-c823-496b-9243-454bc00c5769"
+  ],
+  "agent.hostname": [
+    "Viticm-SOC"
+  ],
+  "agent.id": [
+    "e5e3a761-acc3-41a2-88c5-ee2b2b236970"
+  ],
+  "agent.name": [
+    "Viticm-SOC"
+  ],
+  "agent.type": [
+    "winlogbeat"
+  ],
+  "agent.version": [
+    "8.10.2"
+  ],
+  "destination.ip": [
+    "101.33.27.8"
+  ],
+  "destination.port": [
+    445
+  ],
+  "ecs.version": [
+    "1.12.0"
+  ],
+  "event.action": [
+    "Network connection detected (rule: NetworkConnect)"
+  ],
+  "event.category": [
+    "network"
+  ],
+  "event.code": [
+    "3"
+  ],
+  "event.created": [
+    "2025-05-29T09:15:28.461Z"
+  ],
+  "event.ingested": [
+    "2025-05-29T09:15:29.703Z"
+  ],
+  "event.kind": [
+    "event"
+  ],
+  "event.module": [
+    "sysmon"
+  ],
+  "event.provider": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "event.type": [
+    "start",
+    "connection",
+    "protocol"
+  ],
+  "host.architecture": [
+    "x86_64"
+  ],
+  "host.hostname": [
+    "viticm-soc"
+  ],
+  "host.id": [
+    "7e25c1a1-4745-47c6-abe9-ec7f50bf1d98"
+  ],
+  "host.ip": [
+    "fe80::2674:6aaf:881:b09b",
+    "192.168.52.131"
+  ],
+  "host.mac": [
+    "00-0C-29-C5-7F-10"
+  ],
+  "host.name": [
+    "viticm-soc"
+  ],
+  "host.os.build": [
+    "19045.3803"
+  ],
+  "host.os.family": [
+    "windows"
+  ],
+  "host.os.kernel": [
+    "10.0.19041.3803 (WinBuild.160101.0800)"
+  ],
+  "host.os.name": [
+    "Windows 10 Home"
+  ],
+  "host.os.name.text": [
+    "Windows 10 Home"
+  ],
+  "host.os.platform": [
+    "windows"
+  ],
+  "host.os.type": [
+    "windows"
+  ],
+  "host.os.version": [
+    "10.0"
+  ],
+  "log.level": [
+    "information"
+  ],
+  "message": [
+    "Network connection detected:\nRuleName: Http\nUtcTime: 2025-05-29 09:15:24.956\nProcessGuid: {7e25c1a1-18f5-6838-1700-000000000600}\nProcessId: 1308\nImage: C:\\Windows\\System32\\svchost.exe\nUser: NT AUTHORITY\\SYSTEM\nProtocol: tcp\nInitiated: true\nSourceIsIpv6: false\nSourceIp: 192.168.52.131\nSourceHostname: Viticm-SOC.localdomain\nSourcePort: 50052\nSourcePortName: -\nDestinationIsIpv6: false\nDestinationIp: 101.33.27.8\nDestinationHostname: -\nDestinationPort: 80\nDestinationPortName: http"
+  ],
+  "network.community_id": [
+    "1:hrKF29pFt4bOuHH394EugElflnE="
+  ],
+  "network.direction": [
+    "egress"
+  ],
+  "network.protocol": [
+    "SMB"
+  ],
+  "network.transport": [
+    "tcp"
+  ],
+  "network.type": [
+    "ipv4"
+  ],
+  "process.entity_id": [
+    "{7e25c1a1-18f5-6838-1700-000000000600}"
+  ],
+  "process.executable": [
+    "C:\\Windows\\System32\\svchost.exe"
+  ],
+  "process.executable.text": [
+    "C:\\Windows\\System32\\svchost.exe"
+  ],
+  "process.name": [
+    "svchost.exe"
+  ],
+  "process.name.text": [
+    "svchost.exe"
+  ],
+  "process.pid": [
+    1308
+  ],
+  "related.ip": [
+    "192.168.52.131",
+    "101.33.27.8"
+  ],
+  "related.user": [
+    "SYSTEM"
+  ],
+  "rule.name": [
+    "SMB"
+  ],
+  "source.domain": [
+    "Viticm-SOC.localdomain"
+  ],
+  "source.ip": [
+    "192.168.52.131"
+  ],
+  "source.port": [
+    50052
+  ],
+  "user.domain": [
+    "NT AUTHORITY"
+  ],
+  "user.id": [
+    "S-1-5-18"
+  ],
+  "user.name": [
+    "SYSTEM"
+  ],
+  "user.name.text": [
+    "SYSTEM"
+  ],
+  "winlog.api": [
+    "wineventlog"
+  ],
+  "winlog.channel": [
+    "Microsoft-Windows-Sysmon/Operational"
+  ],
+  "winlog.computer_name": [
+    "Viticm-SOC"
+  ],
+  "winlog.event_id": [
+    "3"
+  ],
+  "winlog.opcode": [
+    "Info"
+  ],
+  "winlog.process.pid": [
+    2328
+  ],
+  "winlog.process.thread.id": [
+    3096
+  ],
+  "winlog.provider_guid": [
+    "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+  ],
+  "winlog.provider_name": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "winlog.record_id": [
+    "4624"
+  ],
+  "winlog.task": [
+    "Network connection detected (rule: NetworkConnect)"
+  ],
+  "winlog.user.domain": [
+    "NT AUTHORITY"
+  ],
+  "winlog.user.identifier": [
+    "S-1-5-18"
+  ],
+  "winlog.user.name": [
+    "SYSTEM"
+  ],
+  "winlog.user.type": [
+    "User"
+  ],
+  "winlog.version": [
+    5
+  ],
+  "_id": "CFlTG5cBWZcyZxxBPkku",
+  "_index": ".ds-winlogbeat-8.10.2-2025.05.14-000001",
+  "_score": null
+}

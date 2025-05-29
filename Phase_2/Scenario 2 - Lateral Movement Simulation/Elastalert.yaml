@@ -1,0 +1,53 @@
+name: "Lateral Movement via SMB - Suspicious Logon + Batch Execution"
+type: any
+
+index: winlogbeat-*
+buffer_time:
+  minutes: 10
+
+filter:
+- bool:
+    should:
+      - match:
+          event.code: "4624"
+      - match:
+          winlog.event_id: 1
+- range:
+    "@timestamp":
+      from: "now-10m"
+      to: "now"
+
+# Match specific conditions
+- query:
+    query_string:
+      query: >
+        (
+          (event.code:4624 AND winlog.event_data.LogonType:"3" AND source.ip:"192.168.29.5")
+          OR
+          (winlog.event_id:1 AND winlog.event_data.Image.keyword:*payload.bat)
+        )
+
+alert:
+- "email"
+email:
+- "youremail@example.com"
+
+alert_subject: "🚨 Lateral Movement Detected via SMB!"
+alert_text: |
+  SMB Lateral Movement Detected:
+  - Logon from IP: {0}
+  - Executed: {1}
+  - Host: {2}
+
+  Take action to investigate lateral movement activity.
+
+alert_text_args:
+- winlog.event_data.IpAddress
+- winlog.event_data.Image
+- host.name
+
+aggregation:
+  minutes: 10
+
+realert:
+  minutes: 0
