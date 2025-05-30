@@ -14,6 +14,10 @@ This simulation emulates suspicious insider behavior or a compromised account sc
 - **Monitored Folder**: `C:\SensitiveFiles`
 - **Monitoring Tools**: Sysmon, Winlogbeat, Elasticsearch, Kibana
 
+### 👻 Attacker Mindmap
+![image](https://github.com/user-attachments/assets/63b61896-85dd-410f-9206-c08010e5ab54)
+
+
 ### 🛠️ Attack Execution
 
 1. **Log in to the target system** as `testuser` during off-hours (e.g., 2 AM).
