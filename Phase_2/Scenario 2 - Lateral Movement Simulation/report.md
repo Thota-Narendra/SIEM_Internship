@@ -7,13 +7,16 @@
 This simulation showcases **lateral movement** between two Windows machines using the **PsExec** tool from Sysinternals. PsExec enables execution of commands on a remote system over SMB, typically used by administrators. This technique triggers network logons (event ID 4624), process creation (Sysmon ID 1), and network connection logs (Sysmon ID 3), allowing visibility into lateral activity.
 
 ---
+## 👻 Attacker Mindmap
+![image](https://github.com/user-attachments/assets/4fe027b1-a538-4954-b345-0c7d411de4b2)
+
 
 ## ⚔️ Attack Simulation Steps
 
 ### 🖥️ Environment Setup
 
-- **Attacker Host (A)**: `192.168.29.5` (Windows 10 Home)  
-- **Target Host (B)**: `192.168.51.131` (Windows 10 Home)  
+- **Attacker Host (A)**: `192.168.x.x` (Windows 10 Home)  
+- **Target Host (B)**: `192.168.x.x` (Windows 10 Home)  
 - **Accounts Used**: Local admin credentials on both machines  
 - **Tool Used**: PsExec from Sysinternals  
 - **Monitoring Tools**: Sysmon, Winlogbeat, Elasticsearch, Kibana  
@@ -29,7 +32,7 @@ This simulation showcases **lateral movement** between two Windows machines usin
 #### ✅ 2. Run PsExec to execute a command on Host B
 
 ```cmd
-PsExec.exe \\192.168.51.131 -u Administrator -p Password123 cmd.exe
+PsExec.exe \\192.168.x.x -u Administrator -p Password123 cmd.exe
 ```
 ✅ You should see a new command prompt on the remote host.
 
@@ -56,7 +59,7 @@ Sysmon ID 1: Suspicious cmd.exe, psexesvc.exe, or remote execution artifacts
 ### ✅ Kibana KQL Queries:
 ## Logon Event:
 ```
-event.code:4624 AND winlog.event_data.LogonType:(3 OR 10) AND source.ip:"192.168.29.5"
+event.code:4624 AND winlog.event_data.LogonType:(3 OR 10) AND source.ip:"192.168.x.x"
 ```
 PsExec Service Creation:
 ```
@@ -64,7 +67,7 @@ event.code:1 AND process.name:psexesvc.exe
 ```
 Remote Network Connection (Sysmon):
 ```
-event.code:3 AND destination.ip:"192.168.51.131" AND destination.port:445
+event.code:3 AND destination.ip:"192.168.x.x" AND destination.port:445
 ```
 ### 📸 Screenshot
 📄 ![alt text](<sample log.png>)
@@ -74,14 +77,14 @@ event.code:3 AND destination.ip:"192.168.51.131" AND destination.port:445
 4624 (Remote Logon):
 Logon Type: 3
 Target User: Administrator
-Source IP: 192.168.29.5
+Source IP: 192.168.x.x
 Sysmon ID 1 (Process Creation):
 makefile
 Image: C:\Windows\psexesvc.exe
 ParentImage: PsExec.exe
 Sysmon ID 3 (Network Connection):
-Source IP: 192.168.29.5
-Destination IP: 192.168.51.131
+Source IP: 192.168.x.x
+Destination IP: 192.168.x.x
 Port: 445
 ```
 ### 🛡️ Recommendations
