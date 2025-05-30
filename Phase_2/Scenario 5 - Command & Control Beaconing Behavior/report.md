@@ -9,6 +9,9 @@ Detect periodic HTTP/HTTPS-based communication to rare external domains which ma
 - **Detection Engine**: ElastAlert
 - **Simulation Tool**: curl or scheduled task with http-ping
 
+## 👻 Attacker Mindmap
+![image](https://github.com/user-attachments/assets/faead105-4160-4d7e-8a17-a2934267d410)
+
 ## 🧪 Task Execution Steps
 
 ### ⚙️ Simulating C2 Beaconing Behavior
