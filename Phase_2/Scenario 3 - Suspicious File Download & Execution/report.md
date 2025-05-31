@@ -10,7 +10,11 @@
 - 🧠 **SIEM Stack**: Elasticsearch, Kibana  
 - 📦 **Log Shippers**: Winlogbeat, Sysmon  
 - 🛡 **Detection Engine**: ElastAlert (optional)  
-- 🧪 **Simulation Tool**: PowerShell, VBScript  
+- 🧪 **Simulation Tool**: PowerShell, VBScript
+
+## 👻 Attacker Mindmap
+![image](https://github.com/user-attachments/assets/965eeccf-62a0-4165-9ad9-8f52d42e5a70)
+
 
 ## 🧪 Task Execution Steps
 

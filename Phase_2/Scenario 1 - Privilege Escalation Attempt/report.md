@@ -128,4 +128,7 @@ fodhelper.exe
 - 🔄 Winlogbeat + Sysmon forwarding stack
 
 ---
+## 👻 Attacker Mindmap
+
+![attacker mindmap](https://github.com/user-attachments/assets/dec31829-dfda-4473-b1d1-964b04192693)
 
