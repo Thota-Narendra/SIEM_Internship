@@ -1,0 +1,32 @@
+name: RDP Brute Force and Lateral Movement
+type: frequency
+
+index: winlogbeat-*
+
+num_events: 5
+timeframe:
+  minutes: 2
+
+filter:
+- query:
+    query_string:
+      query: 'event.code:4625 AND winlog.event_data.LogonType:"10"'
+
+alert:
+- email
+
+email:
+- your_email@example.com
+
+alert_subject: "🚨 Multiple RDP Failed Logins Detected"
+alert_text: |
+  Potential brute-force attempt via RDP detected from IP {0}.
+  User: {1}
+  Count: {2} failed attempts within 2 minutes.
+
+alert_text_args:
+- source.ip
+- winlog.event_data.TargetUserName
+- num_hits
+
+timestamp_field: "@timestamp"
