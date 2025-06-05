@@ -1,0 +1,36 @@
+name: Registry Run Key Persistence Detection
+
+type: any
+
+index: winlogbeat-*
+
+filter:
+- term:
+    event.code: 13
+- query:
+    query_string:
+      query: "registry.path:*\\Run AND registry.value:*evil.bat"
+
+alert:
+- email
+
+email:
+- your-email@example.com
+
+alert_subject: "[ALERT] Persistence via Registry Run Key Detected"
+alert_text: |
+  A suspicious registry modification was detected:
+
+  - Registry Path: {0}
+  - Value Set: {1}
+  - Host: {2}
+
+  Please investigate for possible persistence mechanism.
+
+alert_text_args:
+- registry.path
+- registry.value
+- host.name
+
+realert:
+  minutes: 30
