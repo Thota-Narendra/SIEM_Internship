@@ -1,0 +1,155 @@
+{
+  "@timestamp": [
+    "2025-06-07T04:38:38.092Z"
+  ],
+  "agent.ephemeral_id": [
+    "c42c0d83-abca-43b0-ab54-cf0fdcd7a819"
+  ],
+  "agent.hostname": [
+    "Viticm-SOC"
+  ],
+  "agent.id": [
+    "e5e3a761-acc3-41a2-88c5-ee2b2b236970"
+  ],
+  "agent.name": [
+    "Viticm-SOC"
+  ],
+  "agent.type": [
+    "winlogbeat"
+  ],
+  "agent.version": [
+    "8.10.2"
+  ],
+  "ecs.version": [
+    "8.0.0"
+  ],
+  "event.action": [
+    "DnsAllServersTimeoutSystem"
+  ],
+  "event.code": [
+    "1014"
+  ],
+  "event.created": [
+    "2025-06-07T04:38:40.065Z"
+  ],
+  "event.ingested": [
+    "2025-06-07T04:39:53.388Z"
+  ],
+  "event.kind": [
+    "event"
+  ],
+  "event.provider": [
+    "Microsoft-Windows-DNS-Client"
+  ],
+  "host.architecture": [
+    "x86_64"
+  ],
+  "host.hostname": [
+    "viticm-soc"
+  ],
+  "host.id": [
+    "7e25c1a1-4745-47c6-abe9-ec7f50bf1d98"
+  ],
+  "host.ip": [
+    "2405:201:e07c:f1cf:7a09:8baf:c2a2:4158",
+    "2405:201:e07c:f1cf:d099:c6e:7f78:c1b1",
+    "fe80::2674:6aaf:881:b09b",
+    "192.168.29.51"
+  ],
+  "host.mac": [
+    "00-0C-29-C5-7F-10"
+  ],
+  "host.name": [
+    "viticm-soc"
+  ],
+  "host.os.build": [
+    "19045.5854"
+  ],
+  "host.os.family": [
+    "windows"
+  ],
+  "host.os.kernel": [
+    "10.0.19041.5848 (WinBuild.160101.0800)"
+  ],
+  "host.os.name": [
+    "Windows 10 Home"
+  ],
+  "host.os.name.text": [
+    "Windows 10 Home"
+  ],
+  "host.os.platform": [
+    "windows"
+  ],
+  "host.os.type": [
+    "windows"
+  ],
+  "host.os.version": [
+    "10.0"
+  ],
+  "log.level": [
+    "warning"
+  ],
+  "message": [
+    "Name resolution for the name 43.119.38.64.in-addr.arpa. timed out after none of the configured DNS servers responded."
+  ],
+  "winlog.api": [
+    "wineventlog"
+  ],
+  "winlog.channel": [
+    "System"
+  ],
+  "winlog.computer_name": [
+    "Viticm-SOC"
+  ],
+  "winlog.event_data.Address": [
+    "170000000000000024050201E07CF1CF00000000C0A81D010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "winlog.event_data.AddressLength": [
+    "128"
+  ],
+  "winlog.event_data.QueryName": [
+    "43.119.38.64.in-addr.arpa."
+  ],
+  "winlog.event_id": [
+    "1014"
+  ],
+  "winlog.keywords": [
+    "ut:DnsAutoLogKeyword"
+  ],
+  "winlog.opcode": [
+    "Info"
+  ],
+  "winlog.process.pid": [
+    1384
+  ],
+  "winlog.process.thread.id": [
+    6372
+  ],
+  "winlog.provider_guid": [
+    "{1c95126e-7eea-49a9-a3fe-a378b03ddb4d}"
+  ],
+  "winlog.provider_name": [
+    "Microsoft-Windows-DNS-Client"
+  ],
+  "winlog.record_id": [
+    "1230"
+  ],
+  "winlog.task": [
+    "DnsAllServersTimeoutSystem"
+  ],
+  "winlog.user.domain": [
+    "NT AUTHORITY"
+  ],
+  "winlog.user.identifier": [
+    "S-1-5-20"
+  ],
+  "winlog.user.name": [
+    "NETWORK SERVICE"
+  ],
+  "winlog.user.type": [
+    "Well Known Group"
+  ],
+  "_id": "BYywSJcBZ-ZSNlYLJ4gs",
+  "_index": ".ds-winlogbeat-8.10.2-2025.05.14-000001",
+  "_score": null
+}

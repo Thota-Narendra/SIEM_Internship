@@ -1,0 +1,19 @@
+
+name: "Possible DNS Tunneling Detected"
+type: frequency
+index: winlogbeat-*
+num_events: 10
+timeframe:
+  minutes: 1
+
+filter:
+- term:
+    event.code: "1014"
+- query:
+    query_string:
+      query: "dns.question.name: *.attacker.lab AND process.name: powershell.exe"
+
+alert:
+- "email"
+email:
+- "soc@example.com"

@@ -1,0 +1,425 @@
+{
+  "@timestamp": [
+    "2025-06-05T05:32:30.152Z"
+  ],
+  "agent.ephemeral_id": [
+    "08d4f353-546c-499a-88df-d15bbaf80a4e"
+  ],
+  "agent.hostname": [
+    "Viticm-SOC"
+  ],
+  "agent.id": [
+    "e5e3a761-acc3-41a2-88c5-ee2b2b236970"
+  ],
+  "agent.name": [
+    "Viticm-SOC"
+  ],
+  "agent.type": [
+    "winlogbeat"
+  ],
+  "agent.version": [
+    "8.10.2"
+  ],
+  "ecs.version": [
+    "1.12.0"
+  ],
+  "event.action": [
+    "Registry value set (rule: RegistryEvent)"
+  ],
+  "event.category": [
+    "configuration",
+    "registry"
+  ],
+  "event.code": [
+    "13"
+  ],
+  "event.created": [
+    "2025-06-05T05:32:32.008Z"
+  ],
+  "event.ingested": [
+    "2025-06-05T05:32:32.568Z"
+  ],
+  "event.kind": [
+    "event"
+  ],
+  "event.module": [
+    "sysmon"
+  ],
+  "event.provider": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "event.type": [
+    "change"
+  ],
+  "host.architecture": [
+    "x86_64"
+  ],
+  "host.hostname": [
+    "viticm-soc"
+  ],
+  "host.id": [
+    "7e25c1a1-4745-47c6-abe9-ec7f50bf1d98"
+  ],
+  "host.ip": [
+    "2405:201:e07c:f1cf:7a09:8baf:c2a2:4158",
+    "2405:201:e07c:f1cf:7c64:f6b0:70df:606f",
+    "fe80::2674:6aaf:881:b09b",
+    "192.168.29.51"
+  ],
+  "host.mac": [
+    "00-0C-29-C5-7F-10"
+  ],
+  "host.name": [
+    "viticm-soc"
+  ],
+  "host.os.build": [
+    "19045.5854"
+  ],
+  "host.os.family": [
+    "windows"
+  ],
+  "host.os.kernel": [
+    "10.0.19041.5848 (WinBuild.160101.0800)"
+  ],
+  "host.os.name": [
+    "Windows 10 Home"
+  ],
+  "host.os.name.text": [
+    "Windows 10 Home"
+  ],
+  "host.os.platform": [
+    "windows"
+  ],
+  "host.os.type": [
+    "windows"
+  ],
+  "host.os.version": [
+    "10.0"
+  ],
+  "log.level": [
+    "information"
+  ],
+  "message": [
+    "Registry value set:\nRuleName: T1060,RunKey\nEventType: SetValue\nUtcTime: 2025-06-05 05:32:30.152\nProcessGuid: {7e25c1a1-2bee-6841-3601-000000000b00}\nProcessId: 644\nImage: C:\\WINDOWS\\system32\\reg.exe\nTargetObject: HKU\\S-1-5-21-3403377879-2231786425-1901733960-1003\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\FakeUpdater\nDetails: C:\\Temp\\evil.bat\nUser: VITICM-SOC\\pentester"
+  ],
+  "process.entity_id": [
+    "{7e25c1a1-2bee-6841-3601-000000000b00}"
+  ],
+  "process.executable": [
+    "C:\\WINDOWS\\system32\\reg.exe"
+  ],
+  "process.executable.text": [
+    "C:\\WINDOWS\\system32\\reg.exe"
+  ],
+  "process.name": [
+    "reg.exe"
+  ],
+  "process.name.text": [
+    "reg.exe"
+  ],
+  "process.pid": [
+    644
+  ],
+  "registry.data.strings": [
+    "C:\\Temp\\evil.bat"
+  ],
+  "registry.data.type": [
+    "REG_SZ"
+  ],
+  "registry.hive": [
+    "HKU"
+  ],
+  "registry.key": [
+    "S-1-5-21-3403377879-2231786425-1901733960-1003\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\FakeUpdater"
+  ],
+  "registry.path": [
+    "HKU\\S-1-5-21-3403377879-2231786425-1901733960-1003\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\FakeUpdater"
+  ],
+  "registry.value": [
+    "FakeUpdater"
+  ],
+  "related.user": [
+    "pentester"
+  ],
+  "rule.name": [
+    "T1060,RunKey"
+  ],
+  "user.domain": [
+    "VITICM-SOC"
+  ],
+  "user.id": [
+    "S-1-5-18"
+  ],
+  "user.name": [
+    "pentester"
+  ],
+  "user.name.text": [
+    "pentester"
+  ],
+  "winlog.api": [
+    "wineventlog"
+  ],
+  "winlog.channel": [
+    "Microsoft-Windows-Sysmon/Operational"
+  ],
+  "winlog.computer_name": [
+    "Viticm-SOC"
+  ],
+  "winlog.event_data.EventType": [
+    "SetValue"
+  ],
+  "winlog.event_id": [
+    "13"
+  ],
+  "winlog.opcode": [
+    "Info"
+  ],
+  "winlog.process.pid": [
+    2904
+  ],
+  "winlog.process.thread.id": [
+    3556
+  ],
+  "winlog.provider_guid": [
+    "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+  ],
+  "winlog.provider_name": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "winlog.record_id": [
+    "11800"
+  ],
+  "winlog.task": [
+    "Registry value set (rule: RegistryEvent)"
+  ],
+  "winlog.user.domain": [
+    "NT AUTHORITY"
+  ],
+  "winlog.user.identifier": [
+    "S-1-5-18"
+  ],
+  "winlog.user.name": [
+    "SYSTEM"
+  ],
+  "winlog.user.type": [
+    "User"
+  ],
+  "winlog.version": [
+    2
+  ],
+  "_id": "-96TPpcB2QUVNMG9o8u7",
+  "_index": ".ds-winlogbeat-8.10.2-2025.05.14-000001",
+  "_score": null
+}{
+  "@timestamp": [
+    "2025-06-05T05:32:30.152Z"
+  ],
+  "agent.ephemeral_id": [
+    "08d4f353-546c-499a-88df-d15bbaf80a4e"
+  ],
+  "agent.hostname": [
+    "Viticm-SOC"
+  ],
+  "agent.id": [
+    "e5e3a761-acc3-41a2-88c5-ee2b2b236970"
+  ],
+  "agent.name": [
+    "Viticm-SOC"
+  ],
+  "agent.type": [
+    "winlogbeat"
+  ],
+  "agent.version": [
+    "8.10.2"
+  ],
+  "ecs.version": [
+    "1.12.0"
+  ],
+  "event.action": [
+    "Registry value set (rule: RegistryEvent)"
+  ],
+  "event.category": [
+    "configuration",
+    "registry"
+  ],
+  "event.code": [
+    "13"
+  ],
+  "event.created": [
+    "2025-06-05T05:32:32.008Z"
+  ],
+  "event.ingested": [
+    "2025-06-05T05:32:32.568Z"
+  ],
+  "event.kind": [
+    "event"
+  ],
+  "event.module": [
+    "sysmon"
+  ],
+  "event.provider": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "event.type": [
+    "change"
+  ],
+  "host.architecture": [
+    "x86_64"
+  ],
+  "host.hostname": [
+    "viticm-soc"
+  ],
+  "host.id": [
+    "7e25c1a1-4745-47c6-abe9-ec7f50bf1d98"
+  ],
+  "host.ip": [
+    "2405:201:e07c:f1cf:7a09:8baf:c2a2:4158",
+    "2405:201:e07c:f1cf:7c64:f6b0:70df:606f",
+    "fe80::2674:6aaf:881:b09b",
+    "192.168.29.51"
+  ],
+  "host.mac": [
+    "00-0C-29-C5-7F-10"
+  ],
+  "host.name": [
+    "viticm-soc"
+  ],
+  "host.os.build": [
+    "19045.5854"
+  ],
+  "host.os.family": [
+    "windows"
+  ],
+  "host.os.kernel": [
+    "10.0.19041.5848 (WinBuild.160101.0800)"
+  ],
+  "host.os.name": [
+    "Windows 10 Home"
+  ],
+  "host.os.name.text": [
+    "Windows 10 Home"
+  ],
+  "host.os.platform": [
+    "windows"
+  ],
+  "host.os.type": [
+    "windows"
+  ],
+  "host.os.version": [
+    "10.0"
+  ],
+  "log.level": [
+    "information"
+  ],
+  "message": [
+    "Registry value set:\nRuleName: T1060,RunKey\nEventType: SetValue\nUtcTime: 2025-06-05 05:32:30.152\nProcessGuid: {7e25c1a1-2bee-6841-3601-000000000b00}\nProcessId: 644\nImage: C:\\WINDOWS\\system32\\reg.exe\nTargetObject: HKU\\S-1-5-21-3403377879-2231786425-1901733960-1003\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\FakeUpdater\nDetails: C:\\Temp\\evil.bat\nUser: VITICM-SOC\\pentester"
+  ],
+  "process.entity_id": [
+    "{7e25c1a1-2bee-6841-3601-000000000b00}"
+  ],
+  "process.executable": [
+    "C:\\WINDOWS\\system32\\reg.exe"
+  ],
+  "process.executable.text": [
+    "C:\\WINDOWS\\system32\\reg.exe"
+  ],
+  "process.name": [
+    "reg.exe"
+  ],
+  "process.name.text": [
+    "reg.exe"
+  ],
+  "process.pid": [
+    644
+  ],
+  "registry.data.strings": [
+    "C:\\Temp\\evil.bat"
+  ],
+  "registry.data.type": [
+    "REG_SZ"
+  ],
+  "registry.hive": [
+    "HKU"
+  ],
+  "registry.key": [
+    "S-1-5-21-3403377879-2231786425-1901733960-1003\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\FakeUpdater"
+  ],
+  "registry.path": [
+    "HKU\\S-1-5-21-3403377879-2231786425-1901733960-1003\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\FakeUpdater"
+  ],
+  "registry.value": [
+    "FakeUpdater"
+  ],
+  "related.user": [
+    "pentester"
+  ],
+  "rule.name": [
+    "T1060,RunKey"
+  ],
+  "user.domain": [
+    "VITICM-SOC"
+  ],
+  "user.id": [
+    "S-1-5-18"
+  ],
+  "user.name": [
+    "pentester"
+  ],
+  "user.name.text": [
+    "pentester"
+  ],
+  "winlog.api": [
+    "wineventlog"
+  ],
+  "winlog.channel": [
+    "Microsoft-Windows-Sysmon/Operational"
+  ],
+  "winlog.computer_name": [
+    "Viticm-SOC"
+  ],
+  "winlog.event_data.EventType": [
+    "SetValue"
+  ],
+  "winlog.event_id": [
+    "13"
+  ],
+  "winlog.opcode": [
+    "Info"
+  ],
+  "winlog.process.pid": [
+    2904
+  ],
+  "winlog.process.thread.id": [
+    3556
+  ],
+  "winlog.provider_guid": [
+    "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+  ],
+  "winlog.provider_name": [
+    "Microsoft-Windows-Sysmon"
+  ],
+  "winlog.record_id": [
+    "11800"
+  ],
+  "winlog.task": [
+    "Registry value set (rule: RegistryEvent)"
+  ],
+  "winlog.user.domain": [
+    "NT AUTHORITY"
+  ],
+  "winlog.user.identifier": [
+    "S-1-5-18"
+  ],
+  "winlog.user.name": [
+    "SYSTEM"
+  ],
+  "winlog.user.type": [
+    "User"
+  ],
+  "winlog.version": [
+    2
+  ],
+  "_id": "-96TPpcB2QUVNMG9o8u7",
+  "_index": ".ds-winlogbeat-8.10.2-2025.05.14-000001",
+  "_score": null
+}
