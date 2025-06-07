@@ -95,7 +95,7 @@ event.code: "1014" and dns.question.name: *.attacker.lab
 ## ✅ Outcome
 
 - DNS queries containing encoded data were successfully sent to the attacker.
-- Sysmon logged Event ID 22 with base64-encoded DNS requests.
+- Sysmon logged Event ID 1014 with base64-encoded DNS requests.
 - Logs were ingested into Elasticsearch via Winlogbeat.
 - Kibana visualized suspicious DNS activity.
 - ElastAlert rule generated alert on frequent base64 DNS queries.
