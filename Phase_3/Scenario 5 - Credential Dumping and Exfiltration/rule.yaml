@@ -1,0 +1,50 @@
+name: "Credential Dumping - Mimikatz LSASS Access"
+type: any
+index: winlogbeat-*
+use_strftime_index: false
+num_events: 1
+timeframe:
+  minutes: 5
+
+filter:
+  - bool:
+      should:
+        - match:
+            winlog.event_data.Image: "C:\\Windows\\System32\\mimikatz.exe"
+        - match:
+            winlog.event_data.ImageLoaded: "*lsasrv.dll"
+        - match:
+            winlog.event_data.TargetImage: "*lsass.exe"
+        - match:
+            winlog.event_data.CallTrace: "*mimikatz*"
+        - match_phrase:
+            winlog.event_data.Description: "mimikatz"
+        - match:
+            event.code: "10"
+        - match:
+            event.code: "1"
+        - match:
+            winlog.event_data.SourceImage: "*mimikatz.exe"
+
+alert:
+  - email
+
+email:
+  - your-alert-email@example.com
+
+alert_subject: "⚠️ Mimikatz Credential Dumping Detected on {0}"
+alert_subject_args:
+  - host.name
+
+alert_text: |
+  Mimikatz behavior detected involving LSASS memory access. Review the host immediately.
+  Host: {0}
+  User: {1}
+  Image: {2}
+
+alert_text_args:
+  - host.name
+  - winlog.event_data.SubjectUserName
+  - winlog.event_data.Image
+
+alert_missing_value: "N/A"
